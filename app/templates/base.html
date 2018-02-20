@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+    <title>{{ title }} | Blannce</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MLP3QPF');</script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="alternate" hreflang="x" />
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://blannce.com/market",
+            "name": "Market",
+            "image": "https://blannce.com/img/favicon.ico"
+          }
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://blannce.com/freelancers",
+            "name": "Freelancers",
+            "image": "https://blannce.com/img/favicon.ico"
+          }
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "https://blannce.com/agency",
+            "name": "Agency",
+            "image": "https://blannce.com/img/favicon.ico"
+          }
+        }]
+      }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.20&key=AIzaSyAt6prlBMgy-wTsiuRhyUkAZBOJXeYuEcM&libraries=places,weather,visualization,drawing&language=en"></script>
+  <script>
+    var input = undefined;
+    var autocomplete = undefined;
+    $( document ).ready(function() {
+      $("#btnSuscribe").click(function(){
+        let cabexUrl = "https://cabexfm.com";
+        //let cabexUrl = "http://localhost:8000";
+        let user = {};
+        var place = autocomplete.getPlace();
+        let uRedirect =  $("#uRedirect").val();
+        user.city =  $("#user_city").val();
+        user.city_loc = JSON.stringify({lat: place.geometry.location.lat(), lng: place.geometry.location.lng()});
+        user.business_type = $("#user_business").val();
+        user.num_licenses = $("#user_licences").val();
+        user.user_names = $("#user_name").val();
+        user.user_email = $("#user_email").val();
+        user.user_phone = $("#user_phone").val();
+        console.log(user);
+        //$.post(cabexUrl+"/rest/lead/solicitar-demo/", user).done(function( data ) {
+        $.post(cabexUrl+"/rest/lead/solicitar-demo/", user).done(function( data ) {
+          if(data.result){
+            window.location = cabexUrl+uRedirect;
+          }
+        });
+      })
+    });
+  function initialize() {
+    input = document.getElementById('user_city');
+    autocomplete = new google.maps.places.Autocomplete(input);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1834079870243234');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=368855376866149&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLP3QPF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <div class="header-place">
+            <span itemscope itemtype="http://schema.org/SoftwareApplication"/>
+            <div class="header">
+                <div class="bs-example">
+                    <nav class="navbar navbar-default navbar-static navbar-fixed-top new-navbar" style="padding: 8px 0px;" >
+                        <div class="container" >
+                            <div class="navbar-header">
+                                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="/">
+                                    <img  itemprop="image" src="{{ url_for('static', filename='img/logo.png')}}" alt="image" class="img-responsive" />
+                                </a>
+                            </div>
+                            <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a class="menu-item" href="{{ url_for('home.home_page') }}">Inicio</a></li>
+                                    <li><a class="menu-item" href="{{ url_for('market.market_page') }}">Marketplace</a></li>
+                                    <li><a class="menu-item" href="{{ url_for('freelancers.freelancers_page') }}">Freelancers</a></li>
+                                    <li><a class="btn-cod01" href="{{ url_for('auth.register') }}">Crear cuenta</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <div class="container-fluid" style="background-color: #1c252d;padding: 100px 0;">
+
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" >
+                <div style="padding: 10px 0; color: white"><strong>Categorías</strong></div>
+                <ul class="list-unstyled">
+                  <li><a href="/developers/" style="color: white;font-weight: normal;">Desarrolladores</a></li>
+                  <li><a href="/designers/" style="color: white;font-weight: normal;">Diseñadores</a></li>
+                  <li><a href="/marketing/" style="color: white;font-weight: normal;">Marketeros</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" >
+                <div style="padding: 10px 0; color: white"><strong>Comunidad</strong></div>
+                <ul class="list-unstyled">
+                  <li><a href="/#/" style="color: white;font-weight: normal;">Blog</a></li>
+                  <li><a href="/#/" style="color: white;font-weight: normal;">Contáctenos</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" >
+                <div style="padding: 10px 0; color: white"><strong>Blannce Enterprise</strong></div>
+                <ul class="list-unstyled">
+                  <li><a href="/#/" style="color: white;font-weight: normal;">¿Cómo funciona?</a></li>
+                  <li><a href="/#/" style="color: white;font-weight: normal;">Preguntas frecuentes</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12" >
+                 <div style="padding: 10px 0; color: white"><strong>Social</strong></div>
+                 <img  itemprop="image" src="{{ url_for('static', filename='img/logo.png')}}" alt="image" class="img-responsive" />
+              </div>
+          </div>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+
+

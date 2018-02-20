@@ -1,0 +1,418 @@
+<!-- app/templates/home/index.html -->
+
+{% extends "base.html" %}
+{% block title %}Inicio{% endblock %}
+{% block body %}
+
+<div class="main-banner">
+    <div class="container">
+        <div class="row text-center center-block">
+            <div class="col-lg-12 col-md-12">
+                <div class="visible-xs visible-sm">
+                     <div class="main-banner-press-mob">
+                        <h1>Conecta tu flota a través de apps Android & iOS</h1>
+                        <h3>Atiende a millones de clientes locales y turistas</h3><br>
+                         <li><a class="menu-item" href="{{ url_for('home.home_page') }}">Inicio</a></li>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm">
+                    <div class="main-banner-press">
+                        <img  itemprop="image" src="{{ url_for('static', filename='img/teamup.png')}}" alt="image" class="img-responsive center-block" />
+                        <h1>Lo mejor del servicio remoto</h1>
+                        <h3 style="margin-top: 0px" class="lbl-cod11">Por el tiempo que lo necesites</h3><br>
+                        <a href="{{ url_for('market.market_page') }}" class="btn-cod02">Explora el Marketplace</a>
+                        <a href="{{ url_for('freelancers.freelancers_page') }}" class="btn-cod01">Crea un proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bgcurve001">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-3">
+          <img  itemprop="image" src="{{ url_for('static', filename='img/5secretos.png')}}" alt="image" class="img-responsive center-block" />
+      </div>
+       <div class="col-md-12 col-sm-12 col-lg-9">
+        <h2 class="osso-bstitlew">Los 5 secretos para trabajar exitósamente en remoto</h2>
+        <p>
+          Hemos analizado 20 empresas que han desarrollado aspectos importantes de
+          su negocio con la ayuda de un freelance, no es fácil sobre todo cuando no lo hemos hecho antes, te lo contamos todo !
+        </p>
+        <input type="button" class="btn-default osso-btn-1" value="Leer el artículo >>"/>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12 text-center center-block">
+      <br><br><br><br>
+      <h2 class="bstitleb">¿Qué servicios puedes contratar?</h2>
+      <span>Inspirado para emprendedores y empresas</span>
+      <br><br><br>
+    </div>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-lg-4">
+    <div class="panel panel-default">
+      <div class="panel-body pnl-cat1">
+        <h5 class="pnl-titp">WEB DEVELOPMENT</h5>
+        <p>
+            <ul>
+                <li>HTML5, CSS3 & JS.</li>
+                <li>ANGULARJS, ANGULAR.</li>
+                <li>BOOTSTRAP, JQUERY.</li>
+                <li>HUGO STATIC SITE GEN.</li>
+            </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-12 col-sm-12 col-lg-4" style="padding-left:0px; padding-right:0px">
+    <div class="panel panel-default pnl-cat2">
+      <div class="panel-body">
+        <h5 class="pnl-titp">MOBILE DEVELOPMENT</h5>
+        <p>
+          <ul>
+            <li>ANDROID CON JAVA.</li>
+            <li>IOS CON SWIFT.</li>
+            <li>BOOTSTRAP, JQUERY.</li>
+            <li>HÍBRIDO CON IONIC 2.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-lg-4" >
+    <div class="panel panel-default pnl-cat3">
+      <div class="panel-body">
+        <h5 class="pnl-titp">API DEVELOPMENT</h5>
+         <p>
+          <ul>
+            <li>PYTHON + FALCON.</li>
+            <li>PYTHON + DJANGO REST.</li>
+            <li>JAVA + PLAYFRAMEWORK.</li>
+            <li>EXPRESS + NODEJS.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="container">
+
+  <div class="col-md-12 col-sm-12 col-lg-4">
+    <div class="panel panel-default">
+      <div class="panel-body pnl-cat2">
+        <h5 class="pnl-titp">DESKTOP DEVELOPMENT</h5>
+        <p>
+            <ul>
+                <li>JAVA SWING.</li>
+                <li>JAVAFX.</li>
+                <li>ELECTRON.</li>
+            </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-12 col-sm-12 col-lg-4" style="padding-left:0px; padding-right:0px">
+    <div class="panel panel-default pnl-cat1">
+      <div class="panel-body">
+        <h5 class="pnl-titp">DISEÑO, VIDEOS Y ANIMACIONES</h5>
+         <p>
+          <ul>
+            <li>PROTOTIPADO CON SKETCH.</li>
+            <li>DISEÑO GRÁFICO.</li>
+            <li>VIDEOS Y ANIMACIONES.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-lg-4" >
+    <div class="panel panel-default pnl-cat3">
+      <div class="panel-body">
+       <h5 class="pnl-titp">INFRAESTRUCTURA</h5>
+        <p>
+          <ul>
+            <li>GOOGLE CLOUD PLATFORM.</li>
+            <li>DIGITAL OCEAN.</li>
+            <li>LINODE.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12 text-center center-block">
+      <br><br><br><br><br>
+      <h2 class="bstitleb">¿Cómo funciona?</h2>
+      <br><br><br>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col-md-12 col-sm-12 col-lg-3" style="padding-left:0px">
+    <div class="panel text-center">
+        <img src="{{ url_for('static', filename='img/paso1.png')}}" alt="image" class="img-responsive center-block" />
+        <br>
+        <strong>BUSCA</strong><br>
+        <br>
+        <p>
+          Publica tu proyecto.
+          Te conectaremos con los profesionales más
+          adecuados.
+        </p>
+
+    </div>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-lg-3">
+    <div class="panel text-center">
+        <img src="{{ url_for('static', filename='img/paso2.png')}}" alt="image" class="img-responsive center-block" />
+        <br>
+        <strong>CONTRATA</strong><br>
+        <br>
+        <p>
+          Recibe los mejores perfiles, compara las propuestas,
+          y elige a tu freelance favorito.
+        </p>
+    </div>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-lg-3" >
+    <div class="panel text-center">
+        <img src="{{ url_for('static', filename='img/paso3.png')}}" alt="image" class="img-responsive center-block" />
+        <br>
+        <strong>TRABAJA</strong><br>
+        <br>
+        <p>
+          Empieza a chatear, compartir
+          y colaborar desde cualquier lugar en donde te encuentres.
+        </p>
+    </div>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-lg-3" style="padding-right:0px">
+    <div class="panel text-center">
+        <img src="{{ url_for('static', filename='img/paso4.png')}}" alt="image" class="img-responsive center-block" />
+        <br>
+        <strong>PAGA</strong><br>
+        <br>
+        <p>
+          Tus pagos son a través nuestro, con total seguridad y solo cuando
+          lo autorices.
+        </p>
+    </div>
+  </div>
+
+  </div>
+  <br/><br/><br/><br/><br/>
+</div>
+
+
+<div class="bgcurve002">
+    <div class="container ">
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12 text-center center-block">
+          <h2 class="osso-bstitleb" style="color:white">Elige el nivel de servicio acorde a tus necesidades</h2>
+          <br><br><br>
+        </div>
+      </div>
+
+      <div class="col-md-12 col-sm-12 col-lg-4" style="padding-left:0px">
+        <p>
+          Cada opción incluye acceso a una gran red
+          de freelancers. Elija el nivel
+          de servicio que necesita, consultenos
+          si tiene alguna duda.
+        </p>
+      </div>
+
+      <div class="panel panel-default col-md-12 col-sm-12 col-lg-4 osso-pnl-pln-1">
+        <div class="panel-body">
+          <br/>
+          <span style="font-size: 25px;color: #333;font-weight: 600;">Blannce</span><br><br>
+          <p style="color: #1C252D">
+            Encuentra ofertas puntuales de servicio y
+            agrega mas requerimientos según tus necesidades.
+          </p>
+          <br/>
+          <a href="/#/" class="btn-default osso-btn-2" >Crear cuenta</a>
+        </div>
+        <br/>
+      </div>
+
+      <div class="panel panel-default col-md-12 col-sm-12 col-lg-4 osso-pnl-pln-3">
+        <div class="panel-body">
+          <br/>
+          <span style="font-size: 25px;color: #333;font-weight: 600;">Blannce Enterprise</span><br><br>
+          <p style="color: #1C252D">
+            Dirigimos el desarrollo con equipos remotos, te brindamos un responsable
+            dedicado a tu proyecto de inicio a fin.
+          </p>
+          <br/>
+          <a href="/#/" class="btn-default osso-btn-2" >Ver más</a>
+        </div>
+        <br/>
+      </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <br/><br/><br/><br/>
+  <div class="row">
+     <div class="col-md-12 col-sm-12 col-lg-6">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Zjj6S4lMeXI?ecver=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="col-md-12 col-sm-12 col-lg-6">
+      <img src="/img/quote-icon.png" alt="" class="img-responsive" />
+      <h2>
+        Podemos avanzar más contratando un equipo de desarrollo online.
+      </h2>
+      <br/>
+      <span>
+        Aaron Gutierrez<br/>
+        CEO Comme
+      </span>
+      <br/><br/>
+      <input type="button" class="btn btn-default osso-btn-2" value="Ver la historia completa"/>
+    </div>
+
+  </div>
+  <hr class="division" />
+</div>
+
+
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-12 col-sm-12 col-lg-12 text-center center-block">
+        <h2 class="osso-bstitleb">Navegue por nuestros principales perfiles</h2>
+        <br/><br/><br/>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-lg-3">
+      <ul class="list-unstyled">
+        <li><a href="/hire/?p=android-developers" class="osso-aheight">Desarrolladores Android</a></li>
+        <li><a href="/hire/?p=angular-developers" class="osso-aheight">Desarrolladores Angular</a></li>
+        <li><a href="/hire/?p=ios-developers" class="osso-aheight">Desarrolladores iOS</a></li>
+        <li><a href="/hire/?p=ionic-developers" class="osso-aheight">Desarrolladores IONIC</a></li>
+        <li><a href="/hire/?p=java-developers" class="osso-aheight">Desarrolladores Java</a></li>
+        <li><a href="/hire/?p=python-developers" class="osso-aheight">Desarrolladores Python</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-lg-3">
+      <ul class="list-unstyled">
+        <li><a href="/hire/?p=ruby-developers" class="osso-aheight">Desarrolladores Ruby</a></li>
+        <li><a href="/hire/?p=android-developers" class="osso-aheight">Desarrolladores Node</a></li>
+        <li><a href="/hire/?p=reactjs-developers" class="osso-aheight">Desarrolladores React</a></li>
+        <li><a href="/hire/?p=php-developers" class="osso-aheight">Desarrolladores PHP</a></li>
+        <li><a href="/hire/?p=frontend-developers" class="osso-aheight">Desarrolladores Frontend</a></li>
+        <li><a href="/hire/?p=javascript-developers" class="osso-aheight">Desarrolladores Javascript</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-lg-3">
+      <ul class="list-unstyled">
+        <li><a href="/hire/?p=logo-designers" class="osso-aheight">Diseñadores de Logo</a></li>
+        <li><a href="/hire/?p=graphic-designers" class="osso-aheight">Diseñadores Gráficos</a></li>
+        <li><a href="/hire/?p=ui-designers" class="osso-aheight">Diseñadores UI</a></li>
+        <li><a href="/hire/?p=ux-designers">Diseñadores UX</a></li>
+        <li><a href="/hire/?p=mobile-designers" class="osso-aheight">Diseñadores Mobile</a></li>
+        <li><a href="/hire/?p=web-designers" class="osso-aheight">Diseñadores Web</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-lg-3">
+      <ul class="list-unstyled">
+        <li><a href="/hire/?p=seo-experts" class="osso-aheight">Marketing SEO</a></li>
+        <li><a href="/hire/?p=sem-experts" class="osso-aheight">Marketing SEM</a></li>
+        <li><a href="/hire/?p=facebook-ads-experts" class="osso-aheight">Facebook Ads</a></li>
+        <li><a href="/hire/?p=google-adwords-experts" class="osso-aheight">Google Adwords</a></li>
+        <li><a href="/hire/?p=content-marketing" class="osso-aheight">Marketing de contenidos</a></li>
+        <li><a href="/hire/?p=web-analytics" class="osso-aheight">Analítica Web</a></li>
+      </ul>
+    </div>
+
+  </div>
+  <br/><br/>
+  <hr class="division" />
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12 text-center center-block">
+      <h2 class="osso-bstitleb">Lecturas recomendadas</h2>
+      <br/><br/><br/>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-12 col-sm-12 col-lg-3">
+
+      <div class="panel panel-default">
+        <img src="{{ url_for('static', filename='img/post0001.png')}}" alt="image" class="img-responsive center-block" />
+        <div class="panel-body">
+          <h4><strong>Crea una marca atractiva y visual</strong></h4><br>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-lg-3">
+       <div class="panel panel-default">
+        <img src="{{ url_for('static', filename='img/post0002.png')}}" alt="image" class="img-responsive center-block" />
+        <div class="panel-body">
+          <h4><strong>Crea una página web a tu medida</strong></h4><br>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-12 col-sm-12 col-lg-3">
+       <div class="panel panel-default">
+         <img src="{{ url_for('static', filename='img/post0003.png')}}" alt="image" class="img-responsive center-block" />
+         <div class="panel-body">
+          <h4><strong>El embudo del marketing digital</strong></h4><br>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-12 col-sm-12 col-lg-3">
+       <div class="panel panel-default">
+        <img src="{{ url_for('static', filename='img/post0004.png')}}" alt="image" class="img-responsive center-block" />
+        <div class="panel-body">
+          <h4><strong>El futuro está en las apps móviles.</strong></h4><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

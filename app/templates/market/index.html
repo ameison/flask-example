@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Marketplace{% endblock %}
+{% block body %}
+<div class="container-fluid commun_banner">
+    <div class="row text-center">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Explora todas los posibilidades</h1>
+            <span>Consulta los niveles de personalización</span>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <form class="form form-vertical" role="form">
+                <div class="form-group">
+                    <select name="sel" id="sel" class="form-control">
+                        <option value="1">Proposito general</option>
+                        <option value="2">Proposito específico</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="first_name" name="first_name" placeholder="Nombres" type="text" value="">
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-9">
+            <div class="row">
+                {% if freelancers %}
+                    {% for f in freelancers %}
+                        <div class="col-lg-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    {{ f.nombres }} <br/>
+                                    {{ f.correo}}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

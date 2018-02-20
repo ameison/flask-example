@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Registro{% endblock %}
+{% block body %}
+
+<div class="container" style="padding-top: 90px;">
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form form-vertical" method="post" role="form" style="padding: 50px">
+                    {{ form.hidden_tag() }}
+                    <strong class="center-block">Crear cuenta</strong><br/>
+                    <div class="switch-title">¿Qué deseas hacer?</div>
+                    <div class="switch-field">
+                        {% for subfield in form.primary_use %}
+                            {{ subfield }}
+                            {{ subfield.label }}
+                        {% endfor %}
+                        {% for error in form.primary_use.errors %}
+                            <div class="lbl-formerr">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                {{ form.first_name(class_="form-control") }}
+                                {% for error in form.first_name.errors %}
+                                <div class="lbl-formerr">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-lg-6">
+                                {{ form.last_name(class_="form-control") }}
+                                {% for error in form.last_name.errors %}
+                                <div class="lbl-formerr">{{ error }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form.country(class_="form-control") }}
+                        {% for error in form.country.errors %}
+                        <div class="lbl-formerr">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.email(class_="form-control") }}
+                        {% for error in form.email.errors %}
+                        <div class="lbl-formerr">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.password(class_="form-control") }}
+                        {% for error in form.password.errors %}
+                        <div class="lbl-formerr">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                    <div class="form-group">
+                        {{ form.confirm_password(class_="form-control") }}
+                        {% for error in form.confirm_password.errors %}
+                        <div class="lbl-formerr">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <br/>
+                    <input type="submit" class="btn btn-cod01" value="Crear cuenta">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
+

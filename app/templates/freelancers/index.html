@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Freelancers{% endblock %}
+{% block body %}
+<div class="container-fluid commun_banner">
+    <div class="row text-center">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Wordpress developers</h1>
+            <span>Consulta y recibe propuestas</span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% if freelancers %}
+            {% for f in freelancers %}
+                <div class="col-lg-3">
+                    <div class="panel panel-default">
+                        <div>
+                            <img  itemprop="image" src="{{ url_for('static', filename='img/user001.jpg')}}" alt="image" class="img-responsive img-user" />
+                        </div>
+                        <div>
+                            {{ f.nombres }} <br/>
+                            {{ f.descripcion}}<br/>
+                            {{ f.costo_hora}}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
